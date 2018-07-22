@@ -9,5 +9,6 @@ class WhatIsItApplication
 fun main(args: Array<String>) {
     val context = runApplication<WhatIsItApplication>(*args)
     val service : VisionService = context.getBean(VisionService::class.java)
+    service.getCredentialsEnv()
     service.checkImage()
 }
